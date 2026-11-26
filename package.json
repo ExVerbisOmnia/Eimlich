@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "description": "D'um Ponto às Linhas: crônicas e contos de Eimlich, SPA estática publicada no GitHub Pages por uma GitHub Action.",
+  "homepage": "https://exverbisomnia.github.io/eimlich/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ExVerbisOmnia/eimlich.git"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
