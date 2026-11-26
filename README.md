@@ -1,6 +1,6 @@
 # D'um Ponto às Linhas
 
-Crônicas e contos de Eimlich, em português, inglês e francês. O site é estático: os textos são arquivos Markdown e, a cada envio para a branch `main`, uma GitHub Action monta o site e publica no GitHub Pages: primeiro em `https://exverbisomnia.github.io/eimlich/` e, quando o domínio estiver configurado, em `https://eimlich.com/`. Tudo gratuito, sem servidor e sem serviços de terceiros; até as fontes são servidas pelo próprio site.
+Crônicas e contos de Eimlich, em português, inglês e francês. O site é estático: os textos são arquivos Markdown e, a cada envio para a branch `main`, uma GitHub Action monta o site e publica no GitHub Pages: primeiro em `https://exverbisomnia.github.io/Eimlich/` e, quando o domínio estiver configurado, em `https://eimlich.com/`. Tudo gratuito, sem servidor e sem serviços de terceiros; até as fontes são servidas pelo próprio site.
 
 ## Como publicar um texto
 
