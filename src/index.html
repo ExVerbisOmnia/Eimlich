@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{lang}}" data-theme="escuro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="author" content="{{author}}">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="{{title}}" href="feed.xml">
+<link rel="preload" href="fonts/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css?v={{v.css}}">
+<script>
+  // Before first paint: the reader's chosen theme (dark by default), and motion only
+  // when the system hasn't asked for less of it.
+  (function () {
+    var d = document.documentElement;
+    try { if (localStorage.getItem('tema') === 'claro') d.setAttribute('data-theme', 'claro'); } catch (e) {}
+    try { if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('dance'); } catch (e) {}
+  })();
+</script>
+<script src="app.js?v={{v.js}}" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo" id="pular">Pular para o texto</a>
+<div class="page">
+  <header class="topo">
+    <a class="marca" href="#/" id="marca">
+      <span class="ponto" aria-hidden="true"></span>
+      <span class="nome">{{title}}</span>
+    </a>
+    <nav class="nav" aria-label="Seções" id="nav"></nav>
+    <div class="idiomas" id="idiomas" role="group" aria-label="Idioma"></div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <noscript>
+      <p class="aviso">Este blog precisa de JavaScript para mostrar os textos. Eles também estão no <a href="feed.xml">feed</a>.</p>
+    </noscript>
+  </main>
+
+  <footer class="rodape">
+    <p class="assinatura">{{author}}</p>
+    <p class="licenca" id="licenca">© {{author}} · Textos sob <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC BY-NC-ND 4.0</a></p>
+    <p class="linhas">
+      <button type="button" id="tema" class="tema">Tema claro</button>
+      <a href="feed.xml">Feed</a>
+    </p>
+  </footer>
+</div>
+</body>
+</html>
